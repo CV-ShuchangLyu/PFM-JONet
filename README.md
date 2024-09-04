@@ -7,7 +7,6 @@ This repo is the implementation of "Joint-Optimized Unsupervised Adversarial Dom
 <table>
     <tr>
     <td><img src="PaperFigs\Fig1.png" width = "100%" alt="SAM-JOANet"/></td>
-    <td><img src="PaperFigs\Fig2.png" width = "100%" alt="ST-DASegNet"/></td>
     </tr>
 </table>
 
