@@ -16,9 +16,11 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 
 **We follow [ST-DASegNet](https://github.com/cv516Buaa/ST-DASegNet) for detailed dataset preparation.**
 
+<table>
 <tr>
     <td><img src="PaperFigs\tree_data.png" width = "100%" alt="tree-data"/></td>
 </tr>
+</table>table>
 
 ## ST-DASegNet
 
