@@ -20,7 +20,7 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 <tr>
     <td><img src="PaperFigs\tree_data.png" width = "100%" alt="tree-data"/></td>
 </tr>
-</table>table>
+</table>
 
 ## ST-DASegNet
 
