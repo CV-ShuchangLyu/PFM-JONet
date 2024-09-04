@@ -12,7 +12,7 @@ This repo is the implementation of "Joint-Optimized Unsupervised Adversarial Dom
 
 ## Dataset Preparation
 
-We select Postsdam, Vaihingen and LoveDA as benchmark datasets and create train, val, test list for researchers to follow. 
+We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark datasets.
 
 **In the following, we provide the detailed commands for dataset preparation.**
 
