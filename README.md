@@ -30,11 +30,13 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
     
     python >= 3.7
         
-    pytorch >= 1.4
+    pytorch >= 1.11
         
-    cuda >= 10.0
+    cuda >= 11.7
+
+   **This version depends on mmengine and mmcv (2.0.1)**
     
-2. prerequisites: Please refer to  [MMSegmentation PREREQUISITES](https://mmsegmentation.readthedocs.io/en/latest/get_started.html).
+3. prerequisites: Please refer to  [MMSegmentation PREREQUISITES](https://mmsegmentation.readthedocs.io/en/latest/get_started.html).
 
      ```
      cd ST-DASegNet
