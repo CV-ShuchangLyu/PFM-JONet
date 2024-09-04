@@ -67,40 +67,29 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 
 ### Testing
   
-Trained with the above commands, you can get a trained model to test the performance of your model.   
+Trained with the above commands, you can get your trained model to test the performance of your model.   
 
-1. Testing commands
+1. ISPRS UDA-RSSeg task:
 
-    ```
-     cd ST-DASegNet
-     
-     ./tools/dist_test.sh yourpath/config.py yourpath/trainedmodel.pth --eval mIoU   
-     ./tools/dist_test.sh yourpath/config.py yourpath/trainedmodel.pth --eval mFscore 
      ```
-
-2. Testing cases: P2V_IRRG_64.33.pth and V2P_IRRG_59.65.pth : [google drive](https://drive.google.com/drive/folders/1qVTxY0nf4Rm4-ht0fKzIgGeLu4tAMCr-?usp=sharing)
-
-    ```
-     cd ST-DASegNet
+     cd SAM-JOANet
      
-     ./tools/dist_test.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Potsdam2Vaihingen.py 2 ./experiments/segformerb5/ST-DASegNet_results/P2V_IRRG_64.33.pth --eval mIoU   
-     ./tools/dist_test.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Potsdam2Vaihingen.py 2 ./experiments/segformerb5/ST-DASegNet_results/P2V_IRRG_64.33.pth --eval mFscore 
+     ./tools/dist_test.sh ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet.py ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet_results/iter_11000_P2V_66.86.pth
      ```
      
+2. CITY-OSM UDA_RSSeg task:
+
      ```
-     cd ST-DASegNet
+     cd SAM-JOANet
      
-     ./tools/dist_test.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Vaihingen2Potsdam.py 2 ./experiments/segformerb5/ST-DASegNet_results/V2P_IRRG_59.65.pth --eval mIoU   
-     ./tools/dist_test.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Vaihingen2Potsdam.py 2 ./experiments/segformerb5/ST-DASegNet_results/V2P_IRRG_59.65.pth --eval mFscore 
+    CUDA_VISIBLE_DEVICES=1 python ./tools/test.py ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet_P2C.py ./experiments/iter_35000_P2C_56.96.pth --show-dir ./P2C_results
      ```
 
-The ArXiv version of this paper is release. [ST-DASegNet_arxiv](https://arxiv.org/pdf/2301.05526.pdf). This paper has been published on JAG, please refer to [Self-Training Guided Disentangled Adaptation for Cross-Domain Remote Sensing Image Semantic Segmentation](https://doi.org/10.1016/j.jag.2023.103646).
+The ArXiv version of this paper will be release soon.
 
 If you have any question, please discuss with me by sending email to lyushuchang@buaa.edu.cn.
 
 # References
 Many thanks to their excellent works
-* [MMSegmentation](https://github.com/open-mmlab/mmsegmentation)
-* [MMGeneration](https://github.com/open-mmlab/mmgeneration)
-* [DAFormer](https://github.com/lhoyer/DAFormer)
-
+* [mmsegmentation](https://github.com/open-mmlab/mmsegmentation)
+* [mmagic](https://github.com/open-mmlab/mmagic)
