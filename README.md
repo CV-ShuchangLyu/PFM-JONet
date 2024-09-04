@@ -22,7 +22,7 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 </tr>
 </table>
 
-## ST-DASegNet
+## SAM-JOANet
 
 ### Install
 
@@ -39,7 +39,7 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 3. prerequisites: Please refer to  [MMSegmentation PREREQUISITES](https://mmsegmentation.readthedocs.io/en/latest/get_started.html).
 
      ```
-     cd ST-DASegNet
+     cd SAM-JOANet
      
      pip install -e .
      
@@ -49,20 +49,6 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
      ```
 
 ### Training
-
-**mit_b5.pth** : [google drive](https://drive.google.com/drive/folders/1cmKZgU8Ktg-v-jiwldEc6IghxVSNcFqk?usp=sharing) For SegFormerb5 based ST-DASegNet training, we provide ImageNet-pretrained backbone here.
-
-We select deeplabv3 and Segformerb5 as baselines. Actually, we use deeplabv3+, which is a more advanced version of deeplabv3. After evaluating, we find that deeplabv3+ has little modification compared to deeplabv3 and has little advantage than deeplabv3.
-
-For LoveDA results, we evaluate on test datasets and submit to online server (https://github.com/Junjue-Wang/LoveDA) (https://codalab.lisn.upsaclay.fr/competitions/424). We also provide the evaluation results on validation dataset.
-
-<table>
-    <tr>
-    <td><img src="PaperFigs\LoveDA_Leaderboard_Urban.jpg" width = "100%" alt="LoveDA UDA Urban"/></td>
-    <td><img src="PaperFigs\LoveDA_Leaderboard_Rural.jpg" width = "100%" alt="LoveDA UDA Rural"/></td>
-    </tr>
-</table>
-
 1. Potsdam IRRG to Vaihingen IRRG:
 
      ```
