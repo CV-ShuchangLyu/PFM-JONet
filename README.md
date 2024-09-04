@@ -14,7 +14,7 @@ This repo is the implementation of "Joint-Optimized Unsupervised Adversarial Dom
 
 We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark datasets.
 
-**In the following, we provide the detailed commands for dataset preparation.**
+**We follow [ST-DASegNet](https://github.com/cv516Buaa/ST-DASegNet) for detailed dataset preparation.**
 
 **Potsdam**
      
