@@ -2,7 +2,7 @@
 
 ## CODE for AAAI 2025 Anonymous submission
 
-This repo is the implementation of ["Self-Training Guided Disentangled Adaptation for Cross-Domain Remote Sensing Image Semantic Segmentation"](https://arxiv.org/pdf/2301.05526.pdf). we refer to  [MMSegmentation](https://github.com/open-mmlab/mmsegmentation) and [MMGeneration](https://github.com/open-mmlab/mmgeneration). Many thanks to SenseTime and their two excellent repos.
+This repo is the implementation of "Joint-Optimized Unsupervised Adversarial Domain Adaptation in Remote Sensing Segmentation with Prompted Foundation Model". We refer to  [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) and [mmagic](https://github.com/open-mmlab/mmagic). Many thanks to SenseTime and their two excellent repos.
 
 <table>
     <tr>
