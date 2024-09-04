@@ -16,35 +16,9 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 
 **We follow [ST-DASegNet](https://github.com/cv516Buaa/ST-DASegNet) for detailed dataset preparation.**
 
-**Potsdam**
-     
-     Move the ‘3_Ortho_IRRG.zip’ and ‘5_Labels_all_noBoundary.zip’ to Potsdam_IRRG folder 
-     Move the ‘2_Ortho_RGB.zip’ and ‘5_Labels_all_noBoundary.zip’ to Potsdam_RGB folder
-     python tools/convert_datasets/potsdam.py yourpath/ST-DASegNet/data/Potsdam_IRRG/ --clip_size 512 --stride_size 512
-     python tools/convert_datasets/potsdam.py yourpath/ST-DASegNet/data/Potsdam_RGB/ --clip_size 512 --stride_size 512
-
-**Vaihingen**
-
-     Move the 'ISPRS_semantic_labeling_Vaihingen.zip' and 'ISPRS_semantic_labeling_Vaihingen_ground_truth_eroded_COMPLETE.zip' to Vaihingen_IRRG folder 
-     python tools/convert_datasets/vaihingen.py yourpath/ST-DASegNet/data/Vaihingen_IRRG/ --clip_size 512 --stride_size 256
-
-**LoveDA**
-    
-     Unzip Train.zip, Val.zip, Test.zip and create Train, Val and Test list for Urban and Rural
-
-**Sentinel-2**
-    
-     python tools/convert_datasets/Sentinel-2.py ./data/yourpath  --out_dir ./data/Sentinel2
-
-**GID (GF-2)**
-    
-     python tools/convert_datasets/GF-2.py ./data/yourpath/GID/Large-scale_Classification_5classes/image_NirRGB --out_dir ./data/GID_G2R/ --clip_size 1024 --stride_size 1024
-     python tools/convert_datasets/GF-2.py ./data/yourpath/GID/Large-scale_Classification_5classes/label_5classes --out_dir ./data/GID_G2R/ --clip_size 1024 --stride_size 1024
-
-**CITY-OSM: CHICAGO and PARIS**
-    
-    python tools/convert_datasets/CITY-OSM.py ./data/yourpath/CITY-OSM/paris/ --out_dir ./data/CITY_paris/ --clip_size 512 --stride_size 512
-    python tools/convert_datasets/CITY-OSM.py ./data/yourpath/CITY-OSM/chicago/ --out_dir ./data/CITY_chicago/ --clip_size 512 --stride_size 512
+<tr>
+    <td><img src="PaperFigs\Fig2.png" width = "100%" alt="tree-data"/></td>
+</tr>
 
 ## ST-DASegNet
 
