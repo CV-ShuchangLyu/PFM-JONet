@@ -49,82 +49,20 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
      ```
 
 ### Training
-1. Potsdam IRRG to Vaihingen IRRG:
+1. ISPRS UDA-RSSeg task:
 
      ```
-     cd ST-DASegNet
+     cd SAM-JOANet
      
-     ./tools/dist_train.sh ./experiments/deeplabv3/config/ST-DASegNet_deeplabv3plus_r50-d8_4x4_512x512_40k_Potsdam2Vaihingen.py 2
-     ./tools/dist_train.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Potsdam2Vaihingen.py 2
-     ```
-
-2. Vaihingen IRRG to Potsdam IRRG:
-
-    ```
-     cd ST-DASegNet
-     
-     ./tools/dist_train.sh ./experiments/deeplabv3/config/ST-DASegNet_deeplabv3plus_r50-d8_4x4_512x512_40k_Vaihingen2Potsdam.py 2
-     ./tools/dist_train.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Vaihingen2Potsdam.py 2
-     ```
-
-3. Potsdam RGB to Vaihingen IRRG:
-
-     ```
-     cd ST-DASegNet
-     
-     ./tools/dist_train.sh ./experiments/deeplabv3/config/ST-DASegNet_deeplabv3plus_r50-d8_4x4_512x512_40k_PotsdamRGB2Vaihingen.py 2
-     ./tools/dist_train.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_PotsdamRGB2Vaihingen.py 2
+     ./tools/dist_train.sh ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet.py 2
      ```
      
-4. Vaihingen RGB to Potsdam IRRG:
+2. CITY-OSM UDA_RSSeg task:
 
      ```
-     cd ST-DASegNet
+     cd SAM-JOANet
      
-     ./tools/dist_train.sh ./experiments/deeplabv3/config/ST-DASegNet_deeplabv3plus_r50-d8_4x4_512x512_40k_Vaihingen2PotsdamRGB.py 2
-     ./tools/dist_train.sh ./experiments/segformerb5/config/ST-DASegNet_segformerb5_769x769_40k_Vaihingen2PotsdamRGB.py 2
-     ```
-
-5. LoveDA Rural to Urban
-
-     ```
-     cd ST-DASegNet
-     
-     ./tools/dist_train.sh ./experiments/deeplabv3/config_LoveDA/ST-DASegNet_deeplabv3plus_r50-d8_4x4_512x512_40k_R2U.py 2
-     ./tools/dist_train.sh ./experiments/segformerb5/config_LoveDA/ST-DASegNet_segformerb5_769x769_40k_R2U.py 2
-     ```
-
-6. LoveDA Urban to Rural
-
-     ```
-     cd ST-DASegNet
-     
-     ./tools/dist_train.sh ./experiments/deeplabv3/config_LoveDA/ST-DASegNet_deeplabv3plus_r50-d8_4x4_512x512_40k_U2R.py 2
-     ./tools/dist_train.sh ./experiments/segformerb5/config_LoveDA/ST-DASegNet_segformerb5_769x769_40k_U2R.py 2
-     ```
-
-7. LoveDA R-G-B Rural to LandCoverNet Sentinel-2
-
-     ```
-     cd ST-DASegNet
-     
-     ./tools/dist_train.sh ./experiments/segformerb5/config_S2LoveDA/ST-DASegNet_segformerb5_769x769_40k_R2S.py 2
-     ```
-
-8. LoveDA R-G-B Rural to GID
-
-     ```
-     cd ST-DASegNet
-     
-     ./tools/dist_train.sh ./experiments/segformerb5/config_GF2LoveDA/ST-DASegNet_segformerb5_769x769_40k_R2G.py 2
-     ```
-
-9. Paris to Chicago
-
-     ```
-     cd ST-DASegNet
-     
-     ./tools/dist_train.sh ./experiments/segformerb5/config_Paris2Chicago/ST-DASegNet_segformerb5_769x769_40k_P2C.py 2
+    ./tools/dist_train.sh ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet_P2C.py 2
      ```
 
 ### Testing
