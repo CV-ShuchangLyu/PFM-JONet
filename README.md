@@ -1,6 +1,6 @@
 # SAM-HTJONet
 
-This repo is the implementation of "Joint-Optimized Unsupervised Adversarial Domain Adaptation in Remote Sensing Segmentation with Prompted Foundation Model". We refer to  [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) and [mmagic](https://github.com/open-mmlab/mmagic). Many thanks to SenseTime and their two excellent repos.
+This repo is the implementation of "Hybrid Training Driven Joint-Optimized Unsupervised Domain Adaptation in Remote Sensing Segmentation with Prompted Foundation Model". We refer to  [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) and [mmagic](https://github.com/open-mmlab/mmagic). Many thanks to SenseTime and their two excellent repos.
 
 <table>
     <tr>
@@ -37,7 +37,7 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 3. prerequisites: Please refer to  [MMSegmentation PREREQUISITES](https://mmsegmentation.readthedocs.io/en/latest/get_started.html).
 
      ```
-     cd SAM-JOANet
+     cd SAM-HTJONet
      
      pip install -e .
      
@@ -50,7 +50,7 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 1. ISPRS UDA-RSSeg task:
 
      ```
-     cd SAM-JOANet
+     cd SAM-HTJONet
      
      ./tools/dist_train.sh ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet.py 2
      ```
@@ -58,7 +58,7 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 2. CITY-OSM UDA_RSSeg task:
 
      ```
-     cd SAM-JOANet
+     cd SAM-HTJONet
      
     ./tools/dist_train.sh ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet_P2C.py 2
      ```
@@ -70,7 +70,7 @@ Trained with the above commands, you can get your trained model to test the perf
 1. ISPRS UDA-RSSeg task:
 
      ```
-     cd SAM-JOANet
+     cd SAM-HTJONet
      
      ./tools/dist_test.sh ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet.py ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet_results/iter_11000_P2V_66.86.pth
      ```
@@ -78,12 +78,12 @@ Trained with the above commands, you can get your trained model to test the perf
 2. CITY-OSM UDA_RSSeg task:
 
      ```
-     cd SAM-JOANet
+     cd SAM-HTJONet
      
     CUDA_VISIBLE_DEVICES=1 python ./tools/test.py ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet_P2C.py ./experiments/iter_35000_P2C_56.96.pth --show-dir ./P2C_results
      ```
 
-The ArXiv version of this paper will be release soon.
+[ArXiv version of this paper]([https://mmsegmentation.readthedocs.io/en/latest/get_started.html](https://arxiv.org/abs/2411.05878)).
 
 If you have any question, please discuss with me by sending email to lyushuchang@buaa.edu.cn.
 
