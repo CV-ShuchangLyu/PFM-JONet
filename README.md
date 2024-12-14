@@ -83,7 +83,7 @@ Trained with the above commands, you can get your trained model to test the perf
     CUDA_VISIBLE_DEVICES=1 python ./tools/test.py ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet_P2C.py ./experiments/iter_35000_P2C_56.96.pth --show-dir ./P2C_results
      ```
 
-[ArXiv version of this paper]([https://mmsegmentation.readthedocs.io/en/latest/get_started.html](https://arxiv.org/abs/2411.05878)).
+[ArXiv version of this paper] (https://arxiv.org/abs/2411.05878).
 
 If you have any question, please discuss with me by sending email to lyushuchang@buaa.edu.cn.
 
