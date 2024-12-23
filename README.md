@@ -1,6 +1,6 @@
 # PFM-HTJONet
 
-This repo is the implementation of "Hybrid Training Driven Joint-Optimized Unsupervised Domain Adaptation in Remote Sensing Segmentation with Prompted Foundation Model". We refer to  [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) and [mmagic](https://github.com/open-mmlab/mmagic). Many thanks to SenseTime and their two excellent repos.
+This repo is the implementation of "Unsupervised Domain Adaptation for VHR Urban Scene Segmentation via Prompted Foundation Model Based Hybrid Training Joint-Optimized Network". We refer to  [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) and [mmagic](https://github.com/open-mmlab/mmagic). Many thanks to SenseTime and their two excellent repos.
 
 <table>
     <tr>
