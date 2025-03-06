@@ -1,10 +1,10 @@
-# PFM-HTJONet
+# PFM-JONet
 
 This repo is the implementation of "Unsupervised Domain Adaptation for VHR Urban Scene Segmentation via Prompted Foundation Model Based Hybrid Training Joint-Optimized Network". We refer to  [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) and [mmagic](https://github.com/open-mmlab/mmagic). Many thanks to SenseTime and their two excellent repos.
 
 <table>
     <tr>
-    <td><img src="PaperFigs\Fig1.png" width = "100%" alt="SAM-JOANet"/></td>
+    <td><img src="PaperFigs\Fig1.png" width = "100%" alt="PFM-JONet"/></td>
     </tr>
 </table>
 
@@ -20,7 +20,7 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 </tr>
 </table>
 
-## PFM-HTJONet
+## PFM-JONet
 
 ### Install
 
@@ -37,7 +37,7 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 3. prerequisites: Please refer to  [MMSegmentation PREREQUISITES](https://mmsegmentation.readthedocs.io/en/latest/get_started.html).
 
      ```
-     cd PFM-HTJONet
+     cd PFM-JONet
      
      pip install -e .
      
@@ -50,7 +50,7 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 1. ISPRS UDA-RSSeg task:
 
      ```
-     cd PFM-HTJONet
+     cd PFM-JONet
      
      ./tools/dist_train.sh ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet.py 2
      ```
@@ -58,7 +58,7 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 2. CITY-OSM UDA_RSSeg task:
 
      ```
-     cd PFM-HTJONet
+     cd PFM-JONet
      
     ./tools/dist_train.sh ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet_P2C.py 2
      ```
@@ -70,7 +70,7 @@ Trained with the above commands, you can get your trained model to test the perf
 1. ISPRS UDA-RSSeg task:
 
      ```
-     cd PFM-HTJONet
+     cd PFM-JONet
      
      ./tools/dist_test.sh ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet.py ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet_results/iter_11000_P2V_66.86.pth
      ```
@@ -78,7 +78,7 @@ Trained with the above commands, you can get your trained model to test the perf
 2. CITY-OSM UDA_RSSeg task:
 
      ```
-     cd PFM-HTJONet
+     cd PFM-JONet
      
     CUDA_VISIBLE_DEVICES=1 python ./tools/test.py ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet_P2C.py ./experiments/iter_35000_P2C_56.96.pth --show-dir ./P2C_results
      ```
