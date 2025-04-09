@@ -57,6 +57,7 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
 
      ```
      ## We add LoRA training in 2025/04/09
+     cd PFM-JONet
      ./tools/dist_train.sh ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet_Lora.py 2
      ```
      
