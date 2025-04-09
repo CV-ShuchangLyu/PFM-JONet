@@ -4,7 +4,7 @@ This repo is the implementation of "Unsupervised Domain Adaptation for VHR Urban
 
 <table>
     <tr>
-    <td><img src="PaperFigs\Fig1.png" width = "100%" alt="PFM-JONet"/></td>
+    <td><img src="PaperFigs\Fig2.png" width = "100%" alt="PFM-JONet"/></td>
     </tr>
 </table>
 
