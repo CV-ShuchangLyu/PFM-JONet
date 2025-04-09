@@ -54,6 +54,11 @@ We select ISPRS (Postsdam/Vaihingen) and CITY-OSM (Paris/Chicago) as benchmark d
      
      ./tools/dist_train.sh ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet.py 2
      ```
+
+     ```
+     ## We add LoRA training in 2025/04/09
+     ./tools/dist_train.sh ./experiments/SAM_UDA_Sb5PromptSTAdv_bit-b16_upernet_Lora.py 2
+     ```
      
 2. CITY-OSM UDA_RSSeg task:
 
