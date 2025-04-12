@@ -10,8 +10,10 @@ from .seg_tta import SegTTAModel
 from .encoder_decoder_SAMPrompt_STAdv import EncoderDecoderwithSAMPromptSTAdv
 ## added by LYU: 2025/04/08
 from .encoder_decoder_SAMPrompt_STAdv_Lora import EncoderDecoderwithSAMPromptSTAdvLora
+from .encoder_decoder_SAMPrompt_STAdv_wgangp import EncoderDecoderwithSAMPromptSTAdv_Wgangp
 
 __all__ = [
     'BaseSegmentor', 'EncoderDecoder', 'CascadeEncoderDecoder', 'SegTTAModel',
-    'MultimodalEncoderDecoder', 'DepthEstimator', 'EncoderDecoderwithSAMPromptSTAdv', 'EncoderDecoderwithSAMPromptSTAdvLora'
+    'MultimodalEncoderDecoder', 'DepthEstimator', 'EncoderDecoderwithSAMPromptSTAdv', 'EncoderDecoderwithSAMPromptSTAdvLora',
+    'EncoderDecoderwithSAMPromptSTAdv_Wgangp'
 ]
