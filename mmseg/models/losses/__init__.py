@@ -14,11 +14,13 @@ from .utils import reduce_loss, weight_reduce_loss, weighted_loss
 
 ## added by LYU: 2024/07/22
 from .gan_loss import GANLoss
+## added by LYU: 2025.04/11
+from .gan_loss import GradientPenaltyLoss, gradient_penalty_loss
 
 __all__ = [
     'accuracy', 'Accuracy', 'cross_entropy', 'binary_cross_entropy',
     'mask_cross_entropy', 'CrossEntropyLoss', 'reduce_loss',
     'weight_reduce_loss', 'weighted_loss', 'LovaszLoss', 'DiceLoss',
     'FocalLoss', 'TverskyLoss', 'OhemCrossEntropy', 'BoundaryLoss',
-    'HuasdorffDisstanceLoss', 'SiLogLoss', 'GANLoss'
+    'HuasdorffDisstanceLoss', 'SiLogLoss', 'GANLoss', 'GradientPenaltyLoss', 'gradient_penalty_loss'
 ]
