@@ -5,6 +5,9 @@ import torch.nn.functional as F
 
 from ..builder import LOSSES
 
+## added by LYU: 2025/04/11
+import torch.autograd as autograd
+
 @LOSSES.register_module()
 class GANLoss(nn.Module):
     """Define GAN loss.
@@ -117,3 +120,92 @@ class GANLoss(nn.Module):
 
         # loss_weight is always 1.0 for discriminators
         return loss if is_disc else loss * self.loss_weight
+    
+## added by LYU: 2025/04/11
+def gradient_penalty_loss(discriminator,
+                          real_data,
+                          fake_data,
+                          loss_weight=None,
+                          mask=None,
+                          norm_mode='pixel') -> torch.Tensor:
+    """Calculate gradient penalty for wgan-gp.
+
+    Args:
+        discriminator (nn.Module): Network for the discriminator.
+        real_data (Tensor): Real input data.
+        fake_data (Tensor): Fake input data.
+        mask (Tensor): Masks for inpainting. Default: None.
+
+    Returns:
+        Tensor: A tensor for gradient penalty.
+    """
+
+    batch_size = real_data.size(0)
+    alpha = torch.rand(batch_size, 1, 1, 1).to(real_data)
+
+    # interpolate between real_data and fake_data
+    interpolates = alpha * real_data + (1. - alpha) * fake_data
+    interpolates = autograd.Variable(interpolates, requires_grad=True)
+
+    disc_interpolates = discriminator(interpolates)
+    gradients = autograd.grad(
+        outputs=disc_interpolates,
+        inputs=interpolates,
+        grad_outputs=torch.ones_like(disc_interpolates),
+        create_graph=True,
+        retain_graph=True,
+        only_inputs=True)[0]
+
+    if mask is not None:
+        gradients = gradients * mask
+
+    if norm_mode == 'pixel':
+        gradients_penalty = ((gradients.norm(2, dim=1) - 1)**2).mean()
+    elif norm_mode == 'HWC':
+        gradients_penalty = ((
+            gradients.reshape(batch_size, -1).norm(2, dim=1) - 1)**2).mean()
+    else:
+        raise NotImplementedError(
+            'Currently, we only support ["pixel", "HWC"] '
+            f'norm mode but got {norm_mode}.')
+    if mask is not None:
+        gradients_penalty /= torch.mean(mask)
+    if loss_weight is not None:
+        gradients_penalty = gradients_penalty * loss_weight
+
+    return gradients_penalty
+
+
+
+@LOSSES.register_module()
+class GradientPenaltyLoss(nn.Module):
+    """Gradient penalty loss for wgan-gp.
+
+    Args:
+        loss_weight (float): Loss weight. Default: 1.0.
+    """
+
+    def __init__(self, loss_weight: float = 1.) -> None:
+        super().__init__()
+        self.loss_weight = loss_weight
+
+    def forward(self,
+                discriminator,
+                real_data,
+                fake_data,
+                mask=None) -> torch.Tensor:
+        """Forward function.
+
+        Args:
+            discriminator (nn.Module): Network for the discriminator.
+            real_data (Tensor): Real input data.
+            fake_data (Tensor): Fake input data.
+            mask (Tensor): Masks for inpainting. Default: None.
+
+        Returns:
+            Tensor: Loss.
+        """
+        loss = gradient_penalty_loss(
+            discriminator, real_data, fake_data, mask=mask)
+
+        return loss * self.loss_weight
