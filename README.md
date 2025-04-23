@@ -1,5 +1,5 @@
 # PFM-JONet
-# Accepted by TGRS2025
+## This paper has already accepted by TGRS2025.
 This repo is the implementation of "Unsupervised Domain Adaptation for VHR Urban Scene Segmentation via Prompted Foundation Model Based Hybrid Training Joint-Optimized Network". We refer to  [mmsegmentation](https://github.com/open-mmlab/mmsegmentation) and [mmagic](https://github.com/open-mmlab/mmagic). Many thanks to SenseTime and their two excellent repos.
 
 <table>
