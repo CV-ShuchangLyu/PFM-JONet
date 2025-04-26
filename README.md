@@ -98,3 +98,15 @@ If you have any question, please discuss with me by sending email to lyushuchang
 Many thanks to their excellent works
 * [mmsegmentation](https://github.com/open-mmlab/mmsegmentation)
 * [mmagic](https://github.com/open-mmlab/mmagic)
+
+# Please Cite
+```
+@ARTICLE{Lyu-TGRS2025,
+  author={Lyu, Shuchang and Zhao, Qi and Sun, Yaxuan and Cheng, Guangliang and He, Yiwei and Wang, Guangbiao and Ren, Jinchang and Shi, Zhenwei},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={Unsupervised Domain Adaptation for VHR Urban Scene Segmentation via Prompted Foundation Model Based Hybrid Training Joint-Optimized Network}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-1}}
+```
